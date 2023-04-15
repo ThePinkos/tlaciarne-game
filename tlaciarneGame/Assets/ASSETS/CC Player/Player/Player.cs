@@ -3,6 +3,7 @@
 // Check the LICENSE.md file for further information.
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SyrupPlayer
 {
@@ -92,6 +93,11 @@ namespace SyrupPlayer
             {
                 Cursor.lockState = CursorLockMode.None;
                 lockedMouse = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                lockedMouse = true;
             }
 
             float horizontal = Input.GetAxis("Horizontal");
